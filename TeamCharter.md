@@ -2,6 +2,12 @@
 Create a RESTful Web API to fulfill the Enterprise Java Course Competency as well as provide a portfolio piece
 
 # Ground Rules for Interaction
+- Treat everyone equally and with respect.
+- Communicate openly / give constructive feedback.
+- Celebrate accomplishments.
+- Address conflict as soon as possible.
+- Complete tasks assigned to us.
+- Meet our deadlines.
 
 # Communication Policies
 - Team meetings will be coordinated via Slack
