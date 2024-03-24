@@ -8,7 +8,6 @@ close to their destination. Often times the Parks, Forests and Recreation areas 
 leading to only some places being found while other places nearby are overlooked. This web service will provide
 information about different State Forests, Parks, and Recreation Areas in a chosen county.
 
-// What does this service provide?
 
 ## Resources
 
@@ -29,11 +28,10 @@ Park
 
 
 - inspired by: https://gist.github.com/steinbring/b5c0bce701569f576059eaeeb2eeb742 (JSON Object containing State parks, forests, and recreation areas within Wisconsin)
-// Table with different parks???
 
-// Should it be normalized??? e.g. county table; natural area type??
-
-// Should a field be added in for park website?
+- // Table with different parks???
+- // Should it be normalized??? e.g. county table; natural area type??
+- // Should a field be added in for park website?
 
 ## Service Calls
 
