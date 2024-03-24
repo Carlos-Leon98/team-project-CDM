@@ -1,7 +1,12 @@
 # WI State Parks RESTful Web Service Project
 
 ## Overview
-// Overview of the RESTful web service
+- Many people travel to Wisconsin to experience the natural scenic beauty it has to offer. It can be difficult to
+locate and then find information about the State Parks, Forests and Recreation Areas throughout the state. People may
+be left searching through many different websites, or hoping to find a booklet at a small gas station when they get
+close to their destination. Often times the Parks, Forests and Recreation areas are listed in different areas as well,
+leading to only some places being found while other places nearby are overlooked. This web service will provide
+information about different State Forests, Parks, and Recreation Areas in a chosen county.
 
 // What does this service provide?
 
