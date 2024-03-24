@@ -20,3 +20,10 @@
 - Detail Management
 - Creativity
 - Organization
+
+## Bios
+### Carlos
+### Darin
+### Michael
+- Coming from a background in science education and biological research, Michael has been taking courses from Madison College for 5 semesters in Web/Software Development and is excited to soon be embarking on a new career in Web Development
+
