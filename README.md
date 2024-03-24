@@ -21,18 +21,18 @@ Park
 
 ## Service Calls
 
-GET /parks/json
-GET /parks/plain
-GET /parks/json/:name
-GET /parks/plain/:name
-GET /parks/json/:id
-GET /parks/plain/:id
-GET /parks/json/:county
-GET /parks/plain/:county
-GET /parks/camping/json
-GET /parks/camping/plain
-GET /parks/toilets/json
-GET /parks/toilets/plain
+- GET /parks/json
+- GET /parks/plain
+- GET /parks/json/:name
+- GET /parks/plain/:name
+- GET /parks/json/:id
+- GET /parks/plain/:id
+- GET /parks/json/:county
+- GET /parks/plain/:county
+- GET /parks/camping/json
+- GET /parks/camping/plain
+- GET /parks/toilets/json
+- GET /parks/toilets/plain
 
 ## Curl List
 
