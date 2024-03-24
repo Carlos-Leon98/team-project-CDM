@@ -51,6 +51,10 @@ Park
 ## Curl List
 - TODO: update with link to text document with urls once application is functional
 
+#### [Team Charter](TeamCharter.md)
+#### [Team Resume](TeamResume.md)
+#### [Time Log](TimeLog.md)
+
 ## Project Plan
 ### Week 9
 - [ ] Team Resume
