@@ -1,4 +1,4 @@
-# WI State Parks RESTful Web Service Porject
+# WI State Parks RESTful Web Service Project
 
 ## Overview
 
