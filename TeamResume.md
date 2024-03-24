@@ -30,3 +30,5 @@
 ### Michael
 - Coming from a background in science education and biological research, Michael has been taking courses from Madison College for 5 semesters in Web/Software Development and is excited to soon be embarking on a new career in Web Development
 
+### Carlos 
+- Currently working as a QA Test Specialist in a development team. Carlos has been taking classes from MATC to get the Associate Degree for Web/Software Developer to extend his knowledge.
