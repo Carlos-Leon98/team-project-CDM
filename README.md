@@ -8,33 +8,48 @@ close to their destination. Often times the Parks, Forests and Recreation areas 
 leading to only some places being found while other places nearby are overlooked. This web service will provide
 information about different State Forests, Parks, and Recreation Areas in a chosen county.
 
-// What does this service provide?
 
 ## Resources
 
 Park
-// Table with different parks???
 
-// Should it be normalized??? e.g. county table; natural area type??
+| Field           | Description                       | Type/Format |
+|-----------------|-----------------------------------|-------------|
+| id              | unique identifier                 | number      |
+| name            | park name                         | String      |
+| county          | county park is in                 | String      |
+| description     | park description                  | String      |
+| GoogleMapsUrl   | url for google maps               | String      |
+| address         | park address                      | String      |
+| HasCamping      | does the park have a campground?  | Boolean     |
+| HasFlushToilets | does the park have flush toilets? | Boolean     |
+|HasPitToilets | does the park have pit toilets? | Boolean |
+| HasHiking       | does the park have hiking?        | Boolean     |
 
-// Should a field be added in for park website?
+
+- inspired by: https://gist.github.com/steinbring/b5c0bce701569f576059eaeeb2eeb742 (JSON Object containing State parks, forests, and recreation areas within Wisconsin)
+
+- // Table with different parks???
+- // Should it be normalized??? e.g. county table; natural area type??
+- // Should a field be added in for park website?
 
 ## Service Calls
 
-GET /parks/json
-GET /parks/plain
-GET /parks/json/:name
-GET /parks/plain/:name
-GET /parks/json/:id
-GET /parks/plain/:id
-GET /parks/json/:county
-GET /parks/plain/:county
-GET /parks/camping/json
-GET /parks/camping/plain
-GET /parks/toilets/json
-GET /parks/toilets/plain
+- GET /parks/json
+- GET /parks/plain
+- GET /parks/json/:name
+- GET /parks/plain/:name
+- GET /parks/json/:id
+- GET /parks/plain/:id
+- GET /parks/json/:county
+- GET /parks/plain/:county
+- GET /parks/camping/json
+- GET /parks/camping/plain
+- GET /parks/toilets/json
+- GET /parks/toilets/plain
 
 ## Curl List
+- TODO: update with link to text document with urls once application is functional
 
 ## Project Plan
 ### Week 9
