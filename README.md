@@ -68,6 +68,8 @@ Park
 ### Week 11
 - [ ] Build Application class
 - [ ] Build Park class for different URI responses
+- [ ] Create user guide/demo service
+- [ ] Deploy to AWS
 
 ### Week 12
 - [ ] Presentation due Wed 4/10, 7pm
