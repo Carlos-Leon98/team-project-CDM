@@ -36,4 +36,3 @@ that way each collaborator can work on their own part independently.
 6. Confirm your changes were pushed correctly to your branch in GitHub
 7. Open a pull request to merge with main
 8. A different group member will review changes and merge the branch
-
