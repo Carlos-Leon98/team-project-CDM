@@ -6,7 +6,8 @@ locate and then find information about the State Parks, Forests and Recreation A
 be left searching through many different websites, or hoping to find a booklet at a small gas station when they get
 close to their destination. Often times the Parks, Forests and Recreation areas are listed in different areas as well,
 leading to only some places being found while other places nearby are overlooked. This web service will provide
-information about different State Forests, Parks, and Recreation Areas in a chosen county.
+developers with information about different State Forests, Parks, and Recreation Areas in a chosen county that they can 
+query and present to park users.
 
 
 ## Resources
