@@ -34,13 +34,6 @@ that way each collaborator can work on their own part independently.
 ``git push origin <your_branch>``
 5. Go to GitHub repository
 6. Confirm your changes were pushed correctly to your branch in GitHub
-6. Go back to the IDE
-7. Return to the main branch
-``git checkout main``
-8. Do a ``git fetch origin``
-9. Do a ``git merge <your_branch>`` to pull changes from your branch to the main branch
-10. Before doing a push, do a ``git pull origin main`` as a good practice to avoid conflicts
-11. Do a push
-``git push origin main``
-12. Go to GitHub repository and confirm the changes were pushed to the main branch
+7. Open a pull request to merge with main
+8. A different group member will review changes and merge the branch
 
