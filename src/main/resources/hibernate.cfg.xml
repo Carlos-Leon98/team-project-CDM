@@ -8,8 +8,8 @@
 
         <!-- TODO Need to update to match StateParks database -->
         <property name="connection.url">Here</property>
-
         <property name="connection.driver_class">Here</property>
+
         <property name="connection.username">Here</property>
         <property name="connection.password">Here</property>
 
