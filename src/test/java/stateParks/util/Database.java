@@ -33,7 +33,7 @@ public class Database implements PropertiesLoader {
      **/
     private Database() {
         this.properties = loadProperties("/database.properties", logger);
-
+        logger.debug(properties);
     }
 
     /** get the only Database object available
