@@ -5,7 +5,9 @@ import org.junit.jupiter.api.Test;
 import stateParks.entity.StatePark;
 import stateParks.util.Database;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -61,9 +63,17 @@ class ParkDaoTest {
 
     @Test
     void findByPropertyEqual() {
+        List<StatePark> parks = stateParkDao.findByPropertyEqual("county", "Dane");
+        assertEquals(2, parks.size());
     }
 
     @Test
     void testFindByPropertyEqual() {
+        HashMap<String, Object> searchTerms = new HashMap<>();
+        searchTerms.put("county", "Dane");
+        searchTerms.put("HasCamping", true);
+        List<StatePark> parks = stateParkDao.findByPropertyEqual(searchTerms);
+        assertEquals(1, parks.size());
+        assertEquals("Blue Mound State Park", parks.get(0).getName());
     }
 }
