@@ -23,19 +23,30 @@ class ParkDaoTest {
     @Test
     void getAll() {
         List<StatePark> parks = stateParkDao.getAll();
-        assertEquals(0, parks.size());
+        assertEquals(15, parks.size());
     }
 
     @Test
     void getById() {
+        StatePark retrievedPark = stateParkDao.getById(22);
+        assertEquals("Amnicon Falls State Park", retrievedPark.getName());
     }
 
     @Test
     void delete() {
+        stateParkDao.delete(stateParkDao.getById(22));
+        assertNull(stateParkDao.getById(22));
+        List<StatePark> parks = stateParkDao.getAll();
+        assertEquals(14, parks.size());
     }
 
     @Test
     void insert() {
+        StatePark newPark = new StatePark();
+        newPark.setName("Wonderful Park");
+        int id = stateParkDao.insert(newPark);
+        StatePark retrievedPark = stateParkDao.getById(id);
+        assertEquals("Wonderful Park", retrievedPark.getName());
     }
 
     @Test
