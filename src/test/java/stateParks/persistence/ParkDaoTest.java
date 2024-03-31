@@ -51,6 +51,12 @@ class ParkDaoTest {
 
     @Test
     void update() {
+        StatePark parkToUpdate = stateParkDao.getById(22);
+        parkToUpdate.setName("new Name");
+        stateParkDao.update(parkToUpdate);
+        StatePark updatedPark = stateParkDao.getById(22);
+        assertEquals("new Name", updatedPark.getName());
+        assertEquals(parkToUpdate, updatedPark);
     }
 
     @Test

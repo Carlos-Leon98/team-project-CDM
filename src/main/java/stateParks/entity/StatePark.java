@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.util.Objects;
+
 /**
  * A Class that represents a State Park.
  * Watchmen Team Project
@@ -255,5 +257,18 @@ public class StatePark {
                 ", HasPitToilets=" + HasPitToilets +
                 ", HasHiking=" + HasHiking +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        StatePark statePark = (StatePark) o;
+        return id == statePark.id && Objects.equals(name, statePark.name) && Objects.equals(county, statePark.county) && Objects.equals(description, statePark.description) && Objects.equals(GoogleMapsUrl, statePark.GoogleMapsUrl) && Objects.equals(address, statePark.address) && Objects.equals(HasCamping, statePark.HasCamping) && Objects.equals(HasFlushToilets, statePark.HasFlushToilets) && Objects.equals(HasPitToilets, statePark.HasPitToilets) && Objects.equals(HasHiking, statePark.HasHiking);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, county, description, GoogleMapsUrl, address, HasCamping, HasFlushToilets, HasPitToilets, HasHiking);
     }
 }
