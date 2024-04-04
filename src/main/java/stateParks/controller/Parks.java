@@ -17,7 +17,7 @@ public class Parks {
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getUserById(@PathParam("id") int id) {
+    public Response getParkById(@PathParam("id") int id) {
         StatePark statePark = dao.getById(id);
         if (statePark != null) {
             return Response
@@ -33,7 +33,7 @@ public class Parks {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAllUsers() {
+    public Response getAllParks() {
         List<StatePark> stateParks = dao.getAll();
         return Response
                 .status(Response.Status.OK)
