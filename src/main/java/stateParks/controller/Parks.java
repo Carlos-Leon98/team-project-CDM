@@ -39,6 +39,66 @@ public class Parks {
     }
 
     @GET
+    @Path("/county/{county}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getByCounty(@PathParam("county") String county) throws JsonProcessingException {
+        dao = new GenericDao<>(StatePark.class);
+
+        List<StatePark> stateParks = dao.findByPropertyEqual(
+                "county",
+                county
+        );
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String json = objectMapper.writeValueAsString(stateParks);
+
+        return Response
+                .status(Response.Status.OK)
+                .entity(json)
+                .build();
+    }
+
+    @GET
+    @Path("/hasCamping")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getByHasCamping() throws JsonProcessingException {
+        dao = new GenericDao<>(StatePark.class);
+
+        List<StatePark> stateParks = dao.findByPropertyEqual(
+                "HasCamping",
+                true
+        );
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String json = objectMapper.writeValueAsString(stateParks);
+
+        return Response
+                .status(Response.Status.OK)
+                .entity(json)
+                .build();
+    }
+
+    @GET
+    @Path("/hasHiking")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getByHasHiking() throws JsonProcessingException {
+        dao = new GenericDao<>(StatePark.class);
+
+        List<StatePark> stateParks = dao.findByPropertyEqual(
+                "HasHiking",
+                true
+        );
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String json = objectMapper.writeValueAsString(stateParks);
+
+        return Response
+                .status(Response.Status.OK)
+                .entity(json)
+                .build();
+    }
+
+    @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllParks() throws JsonProcessingException {
         dao = new GenericDao<>(StatePark.class);
