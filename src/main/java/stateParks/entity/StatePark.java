@@ -14,7 +14,7 @@ import java.util.Objects;
  * @since 1.0
  */
 @Entity
-@Table(name = "StateParks") //TODO Update to match table name
+@Table(name = "StateParks")
 public class StatePark {
     @Id // Need to do this for primary key
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
