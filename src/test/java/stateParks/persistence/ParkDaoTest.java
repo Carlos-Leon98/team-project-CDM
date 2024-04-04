@@ -15,15 +15,16 @@ class ParkDaoTest {
 
     GenericDao<StatePark> stateParkDao;
 
-    @BeforeEach
-    void setUp() {
-        Database database = Database.getInstance();
+@BeforeEach
+  void setUp() {
+       Database database = Database.getInstance();
         database.runSQL("cleanDB.sql");
-        stateParkDao = new GenericDao<>(StatePark.class);
+               stateParkDao = new GenericDao<>(StatePark.class);
     }
 
     @Test
     void getAll() {
+
         List<StatePark> parks = stateParkDao.getAll();
         assertEquals(15, parks.size());
     }
