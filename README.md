@@ -9,6 +9,7 @@ leading to only some places being found while other places nearby are overlooked
 developers with information about different State Forests, Parks, and Recreation Areas in a chosen county that they can 
 query and present to park users.
 
+## [User Guide](UserGuide.md)
 
 ## Resources
 

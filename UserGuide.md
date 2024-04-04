@@ -1,17 +1,21 @@
 # User Guide
 
-Welcome! Our State Parks API can be used for any project looking to display information for Wisconsin State Parks. You can use this service for displaying information about parks in a given county, or for returning information about camping and hiking at different parks. 
+Welcome! Our State Parks API can be used for any project looking to display information for Wisconsin State Parks. You can use this service for displaying information about all parks in Wisconsin, parks in a given county, or for returning information about camping and hiking at different parks. Below we have listed the different service calls, and database schema information.
+
+You can get the information returned as JSON data or as plain text data, just by modifying your service call. This allows you to use the returned information in many different ways. 
 
 ## Different Service Calls:
 
-### Get All Parks returned in JSON:
+(Examples, replace each request / response)
+
+### Get All Parks, returned in JSON:
 
 #### Request:
 ```http request
 [GET] /parks/json 
 ```
 
-#### Response: (Examples, replace each response)
+#### Response: 
 ```javascript
 [
   {
@@ -34,7 +38,7 @@ Welcome! Our State Parks API can be used for any project looking to display info
 ]
 ```
 
-### Get All Parks returned in Plain Text:
+### Get All Parks, returned in Plain Text:
 
 #### Request:
 ```http request
@@ -65,7 +69,7 @@ Welcome! Our State Parks API can be used for any project looking to display info
 ]
 ```
 
-### Get All Parks by Name in JSON
+### Get All Parks by Name, in JSON:
 
 #### Request:
 ```http request
@@ -96,7 +100,7 @@ Welcome! Our State Parks API can be used for any project looking to display info
 ]
 ```
 
-### Get All Parks by Name in Plain Text
+### Get All Parks by Name, in Plain Text:
 
 #### Request:
 ```http request
@@ -127,7 +131,7 @@ Welcome! Our State Parks API can be used for any project looking to display info
 ]
 ```
 
-### Get All Parks by ID in JSON
+### Get All Parks by ID, in JSON:
 
 #### Request:
 ```http request
@@ -158,7 +162,7 @@ Welcome! Our State Parks API can be used for any project looking to display info
 ]
 ```
 
-### Get All Parks by ID in Plain Text
+### Get All Parks by ID, in Plain Text:
 
 #### Request:
 ```http request
@@ -189,7 +193,7 @@ Welcome! Our State Parks API can be used for any project looking to display info
 ]
 ```
 
-### Get All Parks by County in JSON
+### Get All Parks by County, in JSON:
 
 #### Request:
 ```http request
@@ -220,7 +224,7 @@ Welcome! Our State Parks API can be used for any project looking to display info
 ]
 ```
 
-### Get All Parks by County in Plain Text
+### Get All Parks by County, in Plain Text:
 
 #### Request:
 ```http request
@@ -250,7 +254,7 @@ Welcome! Our State Parks API can be used for any project looking to display info
 ]
 ```
 
-### Get if Parks have Camping in JSON
+### Get if Parks have Camping, in JSON:
 
 #### Request:
 ```http request
@@ -280,7 +284,7 @@ Welcome! Our State Parks API can be used for any project looking to display info
 ]
 ```
 
-### Get if Parks have Camping in Plain Text
+### Get if Parks have Camping, in Plain Text:
 
 #### Request:
 ```http request
