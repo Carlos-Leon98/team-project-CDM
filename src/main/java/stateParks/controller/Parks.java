@@ -52,6 +52,33 @@ public class Parks {
     /**
      * Retrieves state parks by county.
      *
+     * @param name The name of the state parks to retrieve.
+     * @return The response containing the state parks information in JSON format.
+     * @throws JsonProcessingException if an error occurs while processing JSON.
+     */
+    @GET
+    @Path("/parkName/{name}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getByName(@PathParam("name") String name) throws JsonProcessingException {
+        dao = new GenericDao<>(StatePark.class);
+
+        List<StatePark> stateParks = dao.findByPropertyEqual(
+                "name",
+                name
+        );
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String json = objectMapper.writeValueAsString(stateParks);
+
+        return Response
+                .status(Response.Status.OK)
+                .entity(json)
+                .build();
+    }
+
+    /**
+     * Retrieves state parks by county.
+     *
      * @param county The county of the state parks to retrieve.
      * @return The response containing the state parks information in JSON format.
      * @throws JsonProcessingException if an error occurs while processing JSON.
