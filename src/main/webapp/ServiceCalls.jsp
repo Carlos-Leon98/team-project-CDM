@@ -76,26 +76,6 @@ name	"Aztalan State Park"
 </code></pre>
 
 <h4>
-    Get All Parks, returned in Plain Text:
-</h4>
-
-<h5>
-    Request:
-</h5>
-
-<pre><code class="language-html">
-[GET] /services/stateParks/
-</code></pre>
-
-<h5>
-    Response:
-</h5>
-
-<pre><code class="language-html">
-
-</code></pre>
-
-<h4>
     Get Park by Name, in JSON:
 </h4>
 
@@ -104,7 +84,7 @@ name	"Aztalan State Park"
 </h5>
 
 <pre><code class="language-html">
-[GET] /parks/json/:name
+[GET] /services/stateParks/parkName/Amnicon Falls State Park
 </code></pre>
 
 <h5>
@@ -112,28 +92,20 @@ name	"Aztalan State Park"
 </h5>
 
 <pre><code class="language-json">
-
+  {
+    "id": 22,
+    "name": "Amnicon Falls State Park",
+    "county": "Douglas County",
+    "description": "Nestled in Douglas County, Amnicon Falls State Park is renowned for its stunning waterfalls and scenic river gorge. Hiking trails wind through rich forests, offering spectacular views of the Amnicon River as it cascades over a series of beautiful waterfalls. This park is a haven for nature lovers and photographers alike, with picnic areas and a campground enhancing its allure.",
+    "address": "4279 County Rd U, South Range, WI 54874",
+    "googleMapsUrl": "https://www.google.com/maps/place/Amnicon+Falls+State+Park/@46.6081889,-91.894753,17z/data=!3m1!4b1!4m6!3m5!1s0x52aef6ff8cdd4e1f:0x6086c97d6cf2df57!8m2!3d46.6081889!4d-91.8921781!16s%2Fm%2F0260p51?entry=ttu",
+    "hasFlushToilets": null,
+    "hasPitToilets": null,
+    "hasCamping": true,
+    "hasHiking": true
+  }
 </code></pre>
 
-<h4>
-    Get Park by Name, in Plain Text:
-</h4>
-
-<h5>
-    Request:
-</h5>
-
-<pre><code class="language-html">
-[GET] /services/stateParks/AmniconFallsStatePark
-</code></pre>
-
-<h5>
-    Response:
-</h5>
-
-<pre><code class="language-html">
-
-</code></pre>
 
 <h4>
     Get Park by ID, in JSON:
@@ -163,26 +135,6 @@ hasHiking	true
 </code></pre>
 
 <h4>
-    Get Park by ID, in Plain Text:
-</h4>
-
-<h5>
-    Request:
-</h5>
-
-<pre><code class="language-html">
-[GET] /services/stateParks/25
-</code></pre>
-
-<h5>
-    Response:
-</h5>
-
-<pre><code class="language-html">
-
-</code></pre>
-
-<h4>
     Get All Parks by County, in JSON:
 </h4>
 
@@ -207,26 +159,6 @@ address	"W7664 Island Rd, Waterloo, WI 53594"
 hasCamping	false
 googleMapsUrl	"https://www.google.com/maps/place/Holzhueter+Farm+State+Park/@43.1738617,-88.9348461,14.73z/data=!4m10!1m2!2m1!1sHolzhueter+Farm+Conservation+Park!3m6!1s0x8806875b19e9c1d7:0xfddf7373c29092f0!8m2!3d43.1762206!4d-88.909318!15sCiFIb2x6aHVldGVyIEZhcm0gQ29uc2VydmF0aW9uIFBhcmtaIyIhaG9semh1ZXRlciBmYXJtIGNvbnNlcnZhdGlvbiBwYXJrkgEKc3RhdGVfcGFya5oBJENoZERTVWhOTUc5blMwVkpRMEZuU1VSNE4zQnlSREZCUlJBQuABAA!16s%2Fg%2F11lqhsh7zf?entry=ttu"
 hasHiking	false
-</code></pre>
-
-<h4>
-    Get All Parks by County, in Plain Text:
-</h4>
-
-<h5>
-    Request:
-</h5>
-
-<pre><code class="language-html">
-[GET] /services/stateParks/county/Jefferson
-</code></pre>
-
-<h5>
-    Response:
-</h5>
-
-<pre><code class="language-html">
-
 </code></pre>
 
 <h4>
@@ -268,23 +200,6 @@ hasHiking	true
 </code></pre>
 
 <h4>
-    Get if Parks have Camping, in Plain Text:
-</h4>
-
-<h5>
-    Request:
-</h5>
-
-<pre><code class="language-html">
-[GET] /services/stateParks/hasCamping
-    </code></pre>
-
-#### Response:
-<pre><code class="language-html">
-
-</code></pre>
-
-<h4>
     Get if Parks have Hiking, in JSON:
 </h4>
 
@@ -320,25 +235,6 @@ hasHiking	true
 
 ... (Returns all State Parks that have Hiking available)
     </code></pre>
-
-<h4>
-    Get if Parks have Hiking, in Plain Text:
-</h4>
-
-<h5>
-    Request:
-</h5>
-<pre><code class="language-html">
-[GET] /services/stateParks/hasHiking
-   </code></pre>
-
-<h5>
-    Response:
-</h5>
-
-<pre><code class="language-html">
-
-</code></pre>
 
 
 </body>
