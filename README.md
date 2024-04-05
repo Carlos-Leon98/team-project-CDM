@@ -24,31 +24,20 @@ Park
 | GoogleMapsUrl   | url for google maps               | String      |
 | address         | park address                      | String      |
 | HasCamping      | does the park have a campground?  | Boolean     |
-| HasFlushToilets | does the park have flush toilets? | Boolean     |
-|HasPitToilets | does the park have pit toilets? | Boolean |
 | HasHiking       | does the park have hiking?        | Boolean     |
 
 
 - inspired by: https://gist.github.com/steinbring/b5c0bce701569f576059eaeeb2eeb742 (JSON Object containing State parks, forests, and recreation areas within Wisconsin)
 
-- // Table with different parks???
-- // Should it be normalized??? e.g. county table; natural area type??
-- // Should a field be added in for park website?
 
 ## Service Calls
 
-- GET /parks/json
-- GET /parks/plain
-- GET /parks/json/:name
-- GET /parks/plain/:name
-- GET /parks/json/:id
-- GET /parks/plain/:id
-- GET /parks/json/:county
-- GET /parks/plain/:county
-- GET /parks/camping/json
-- GET /parks/camping/plain
-- GET /parks/toilets/json
-- GET /parks/toilets/plain
+- GET services/stateParks
+- GET services/stateParks/{id}
+- GET services/stateParks/county/{county}
+- GET services/stateParks/hasCamping
+- GET services/stateParks/hasHiking
+
 
 ## Curl List
 - TODO: update with link to text document with urls once application is functional
