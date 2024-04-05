@@ -1,20 +1,65 @@
-# User Guide
+<!--
+This is the Service Calls page for the State Parks RESTful web Application.
+Watchmen Team Project
+@author Darin Wellons
+@version 1.0
+@since 1.0
+-->
 
-Welcome! Our State Parks API can be used for any project looking to display information for Wisconsin State Parks. You can use this service for displaying information about all parks in Wisconsin, parks in a given county, or for returning information about camping and hiking at different parks. Below we have listed the different service calls, and database schema information.
+<html>
+<head>
+    <!-- highlight.js code blocks source: https://highlightjs.org/#usage -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
-You can get the information returned as JSON data or as plain text data, just by modifying your service call. This allows you to use the returned information in many different ways. 
+    <link rel="stylesheet" href="css/styles.css">
 
-## Available Service Calls:
+    <title>WI State Parks RESTfulService</title>
+</head>
 
-### Get All Parks, returned in JSON:
+<body>
 
-#### Request:
-```http request
+<h1>Welcome to the Wisconsin State Parks RESTful Web Service</h1>
+
+<!-- Nav Bar -->
+<nav>
+    <ul>
+        <li><a href="index.jsp">Home</a></li>
+        <li><a href="ServiceCalls.jsp">Service Calls</a></li>
+        <li><a href="DataTypes.jsp">Data Types</a></li>
+    </ul>
+</nav>
+
+<!-- Service Calls List -->
+<h3>
+    Available Service Calls:
+</h3>
+
+<p>
+    You are able to get all of the parks returned, get a park returned by ID number, get a park returned by Name, get
+    all of the parks returned in a given county, get all of the parks that have camping, and get all of the parks that
+    have hiking. Below are examples of the requests and the responses they gather.
+</p>
+
+<h4>
+    Get All Parks, returned in JSON:
+</h4>
+
+<h5>
+    Request:
+</h5>
+
+<pre><code class="language-html">
 [GET] /services/stateParks/
-```
+</code></pre>
 
-#### Response: 
-```json
+<h5>Response:
+</h5>
+
+<pre><code class="language-json">
 id	22
 name	"Amnicon Falls State Park"
 county	"Douglas County"
@@ -28,57 +73,85 @@ id	23
 name	"Aztalan State Park"
 
 ... (will list all State Parks)
-```
+</code></pre>
 
+<h4>
+    Get All Parks, returned in Plain Text:
+</h4>
 
-### Get All Parks, returned in Plain Text:
+<h5>
+    Request:
+</h5>
 
-#### Request:
-```http request
+<pre><code class="language-html">
 [GET] /services/stateParks/
-```
+</code></pre>
 
-#### Response:
-```text
+<h5>
+    Response:
+</h5>
 
-```
+<pre><code class="language-html">
 
+</code></pre>
 
-### Get Park by Name, in JSON:
+<h4>
+    Get Park by Name, in JSON:
+</h4>
 
-#### Request:
-```http request
+<h5>
+    Request:
+</h5>
+
+<pre><code class="language-html">
 [GET] /parks/json/:name
-```
+</code></pre>
 
-#### Response:
-```text
+<h5>
+    Response:
+</h5>
 
-```
+<pre><code class="language-json">
 
+</code></pre>
 
-### Get Park by Name, in Plain Text:
+<h4>
+    Get Park by Name, in Plain Text:
+</h4>
 
-#### Request:
-```http request
+<h5>
+    Request:
+</h5>
+
+<pre><code class="language-html">
+[GET] /services/stateParks/AmniconFallsStatePark
+</code></pre>
+
+<h5>
+    Response:
+</h5>
+
+<pre><code class="language-html">
+
+</code></pre>
+
+<h4>
+    Get Park by ID, in JSON:
+</h4>
+
+<h5>
+    Request:
+</h5>
+
+<pre><code class="language-html">
 [GET] /services/stateParks/25
-```
+</code></pre>
 
-#### Response:
-```text
+<h5>
+    Response:
+</h5>
 
-```
-
-
-### Get Park by ID, in JSON:
-
-#### Request:
-```http request
-[GET] /services/stateParks/25
-```
-
-#### Response:
-```json
+<pre><code class="language-json">
 id	25
 name	"Big Bay State Park"
 county	"Ashland"
@@ -87,32 +160,45 @@ address	"2402 Hagen Rd, La Pointe, WI 54850"
 hasCamping	true
 googleMapsUrl	"https://www.google.com/maps/place/Big+Bay+State+Park/@46.7881132,-90.6763015,17z/data=!3m1!4b1!4m6!3m5!1s0x52a901b5ae27c23b:0x51fd1fc2d819ca2!8m2!3d46.7881132!4d-90.6737266!16zL20vMDloX3hy?entry=ttu"
 hasHiking	true
-```
+</code></pre>
 
+<h4>
+    Get Park by ID, in Plain Text:
+</h4>
 
-### Get Park by ID, in Plain Text:
+<h5>
+    Request:
+</h5>
 
-#### Request:
-```http request
+<pre><code class="language-html">
 [GET] /services/stateParks/25
-```
+</code></pre>
 
-#### Response:
-```text
+<h5>
+    Response:
+</h5>
 
-```
+<pre><code class="language-html">
 
+</code></pre>
 
-### Get All Parks by County, in JSON:
+<h4>
+    Get All Parks by County, in JSON:
+</h4>
 
-#### Request:
-```http request
+<h5>
+    Request:
+</h5>
+
+<pre><code class="language-html">
 [GET] /services/stateParks/county/Jefferson
-```
+</code></pre>
 
-#### Response:
-```json
+<h5>
+    Response:
+</h5>
 
+<pre><code class="language-json">
 id	49
 name	"Holzhueter Farm Conservation Park"
 county	"Jefferson"
@@ -121,32 +207,45 @@ address	"W7664 Island Rd, Waterloo, WI 53594"
 hasCamping	false
 googleMapsUrl	"https://www.google.com/maps/place/Holzhueter+Farm+State+Park/@43.1738617,-88.9348461,14.73z/data=!4m10!1m2!2m1!1sHolzhueter+Farm+Conservation+Park!3m6!1s0x8806875b19e9c1d7:0xfddf7373c29092f0!8m2!3d43.1762206!4d-88.909318!15sCiFIb2x6aHVldGVyIEZhcm0gQ29uc2VydmF0aW9uIFBhcmtaIyIhaG9semh1ZXRlciBmYXJtIGNvbnNlcnZhdGlvbiBwYXJrkgEKc3RhdGVfcGFya5oBJENoZERTVWhOTUc5blMwVkpRMEZuU1VSNE4zQnlSREZCUlJBQuABAA!16s%2Fg%2F11lqhsh7zf?entry=ttu"
 hasHiking	false
-```
+</code></pre>
 
+<h4>
+    Get All Parks by County, in Plain Text:
+</h4>
 
-### Get All Parks by County, in Plain Text:
+<h5>
+    Request:
+</h5>
 
-#### Request:
-```http request
+<pre><code class="language-html">
 [GET] /services/stateParks/county/Jefferson
-```
+</code></pre>
 
-#### Response:
-```text
+<h5>
+    Response:
+</h5>
 
-```
+<pre><code class="language-html">
 
+</code></pre>
 
-### Get if Parks have Camping, in JSON:
+<h4>
+    Get if Parks have Camping, in JSON:
+</h4>
 
-#### Request:
-```http request
+<h5>
+    Request:
+</h5>
+
+<pre><code class="language-html">
 [GET] /services/stateParks/hasCamping
-```
+</code></pre>
 
-#### Response:
-```json
-0
+<h5>
+    #### Response:
+</h5>
+
+<pre><code class="language-json">
 id	22
 name	"Amnicon Falls State Park"
 county	"Douglas County"
@@ -166,31 +265,41 @@ googleMapsUrl	"https://www.google.com/maps/place/Big+Bay+State+Park/@46.7881132,
 hasHiking	true
 
 ... (Returns all State Parks that have Camping available)
-```
+</code></pre>
 
+<h4>
+    Get if Parks have Camping, in Plain Text:
+</h4>
 
-### Get if Parks have Camping, in Plain Text:
+<h5>
+    Request:
+</h5>
 
-#### Request:
-```http request
+<pre><code class="language-html">
 [GET] /services/stateParks/hasCamping
-```
+    </code></pre>
 
 #### Response:
-```text
+<pre><code class="language-html">
 
-```
+</code></pre>
 
-### Get if Parks have Hiking, in JSON:
+<h4>
+    Get if Parks have Hiking, in JSON:
+</h4>
 
-#### Request:
-```http request
+<h5>
+    Request:
+</h5>
+
+<pre><code class="language-html">
 [GET] /services/stateParks/hasHiking
-```
+   </code></pre>
 
-#### Response:
-```json
-
+<h5>
+    Response:
+</h5>
+<pre><code class="language-json">
 id	22
 name	"Amnicon Falls State Park"
 county	"Douglas County"
@@ -210,31 +319,27 @@ googleMapsUrl	"https://www.google.com/maps/place/Aztalan+State+Park/@43.0694396,
 hasHiking	true
 
 ... (Returns all State Parks that have Hiking available)
-```
+    </code></pre>
 
+<h4>
+    Get if Parks have Hiking, in Plain Text:
+</h4>
 
-### Get if Parks have Hiking, in Plain Text:
-
-#### Request:
-```http request
+<h5>
+    Request:
+</h5>
+<pre><code class="language-html">
 [GET] /services/stateParks/hasHiking
-```
+   </code></pre>
 
-#### Response:
-```text
+<h5>
+    Response:
+</h5>
 
-```
+<pre><code class="language-html">
+
+</code></pre>
 
 
-## Data Types: 
-
-| Field           | Description                      | Type/Format |
-|-----------------|----------------------------------|-------------|
-| id              | Unique Identifier.               | number      |
-| name            | Park Name.                       | String      |
-| county          | County the Park is in.           | String      |
-| description     | Park Description.                | String      |
-| address         | Park Address.                    | String      |
-| HasCamping      | Does the Park have a Campground? | Boolean     |
-| GoogleMapsUrl   | URL for Google Maps.             | String      |
-| HasHiking       | Does the Park have Hiking?       | Boolean     |
+</body>
+</html>
