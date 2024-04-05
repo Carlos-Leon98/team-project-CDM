@@ -1,3 +1,11 @@
+<!--
+This is the homepage for the State Parks RESTful web Application.
+Watchmen Team Project
+@author Darin Wellons
+@version 1.0
+@since 1.0
+-->
+
 <html>
 <head>
     <!-- highlight.js source: https://highlightjs.org/#usage -->
@@ -7,15 +15,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
     <script>hljs.highlightAll();</script>
 
+    <link rel="stylesheet" href="styles.css">
+
     <title>WI State Parks RESTfulService</title>
 </head>
 
 <body>
+
 <h1>Welcome to the Wisconsin State Parks RESTful Web Service</h1>
-
-<p>Please see the documentation below...</p>
-
-<h2># User Guide</h2>
 
 <p>
 Welcome! Our State Parks API can be used for any project looking to display information for Wisconsin State Parks. You can use this service for displaying information about all parks in Wisconsin, parks in a given county, or for returning information about camping and hiking at different parks. Below we have listed the different service calls, and database schema information.
@@ -26,7 +33,7 @@ You can get the information returned as JSON data or as plain text data, just by
 </p>
 
 <h3>
-## Available Service Calls:
+Available Service Calls:
 </h3>
 
 <h4>
@@ -40,7 +47,6 @@ Get All Parks, returned in JSON:
 <pre><code class="language-html">
 [GET] /services/stateParks/
 </code></pre>
-
 
 <h5>Response:
 </h5>
@@ -59,7 +65,7 @@ id	23
 name	"Aztalan State Park"
 
 ... (will list all State Parks)
-</code></code></pre>
+</code></pre>
 
 <h4>
 Get All Parks, returned in Plain Text:
@@ -73,11 +79,13 @@ Request:
 [GET] /services/stateParks/
 </code></pre>
 
-#### Response:
+<h5>
+Response:
+</h5>
+
 <pre><code class="language-html">
 
 </code></pre>
-
 
 <h4>
 Get All Parks by Name, in JSON:
