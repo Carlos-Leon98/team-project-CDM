@@ -6,8 +6,6 @@ You can get the information returned as JSON data or as plain text data, just by
 
 ## Available Service Calls:
 
-(Examples, replace each request / response)
-
 ### Get All Parks, returned in JSON:
 
 #### Request:
