@@ -1,5 +1,6 @@
 package stateParks.persistence;
 
+import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
@@ -12,6 +13,7 @@ import org.hibernate.query.criteria.HibernateCriteriaBuilder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
 
 /**
  * A generic DAO somewhat inspired by http://rodrigouchoa.wordpress.com
@@ -146,7 +148,6 @@ public class GenericDao<T> {
         return items;
     }
 
-
     /**
      * Returns an open session from the SessionFactory
      * @return session
@@ -155,5 +156,4 @@ public class GenericDao<T> {
         return SessionFactoryProvider.getSessionFactory().openSession();
 
     }
-
 }
