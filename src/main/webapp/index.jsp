@@ -29,7 +29,7 @@ Welcome! Our State Parks API can be used for any project looking to display info
 </p>
 
 <p>
-You can get the information returned as JSON data or as plain text data, just by modifying your service call. This allows you to use the returned information in many different ways.
+The information will be returned as JSON data. This allows you to use the returned information in many different ways.
 </p>
 
 <!-- Nav Bar -->
