@@ -50,7 +50,7 @@ public class Parks {
     }
 
     /**
-     * Retrieves state parks by county.
+     * Retrieves a state park by name.
      *
      * @param name The name of the state parks to retrieve.
      * @return The response containing the state parks information in JSON format.
